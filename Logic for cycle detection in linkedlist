@@ -1,0 +1,18 @@
+//Implementation of detecting the loop in the linkedlist
+
+public static void detectLoop(){
+    Node slow=head,fast=head;
+    int flag=0;
+    while(slow!=null && fast!=null && fast.nxt!=null){
+        if(slow==fast){
+            flag=1;
+            break;
+        }
+    }
+    if(flag==0){
+        Systemout.println("No loop detected");
+    }
+    else{
+        System.out.println("Loop is detected");
+    }
+}
